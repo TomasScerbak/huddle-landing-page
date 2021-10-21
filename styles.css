@@ -1,0 +1,19 @@
+/* Typography */
+html {
+  font-size: 62.5%;
+}
+body {
+  line-height: 1.5;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+:root {
+  --color-violet: hsl(257, 40%, 49%);
+  --color-soft-magenta: hsl(300, 69%, 71%);
+
+  --ff-font-family: "Open Sans", sans-serif;
+  --ff-font-family: "Poppins", sans-serif;
+}
