@@ -3,7 +3,11 @@ html {
   font-size: 62.5%;
 }
 body {
+  display: flex;
+  justify-content: center;
+  background-color: var(--color-violet);
   line-height: 1.5;
+  height: 100vh;
 }
 *,
 *::before,
@@ -13,7 +17,124 @@ body {
 :root {
   --color-violet: hsl(257, 40%, 49%);
   --color-soft-magenta: hsl(300, 69%, 71%);
-
-  --ff-font-family: "Open Sans", sans-serif;
-  --ff-font-family: "Poppins", sans-serif;
+}
+h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+p {
+  font-size: 1.5rem;
+}
+/* Background */
+.background {
+  position: absolute;
+  z-index: -1;
+}
+/* Container */
+.container {
+  display: grid;
+  grid-template-rows: auto / 1fr;
+  padding: 8rem;
+  height: 100vh;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+    height: 60vh;
+  }
+}
+/* Buttons */
+.btn {
+  font-size: 1.3rem;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  color: var(--color-violet);
+  background-color: #fff;
+  border-radius: 30px;
+  padding: 1.5rem 9rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  white-space: nowrap;
+  margin: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.btn:hover {
+  background-color: var(--color-violet);
+  color: #fff;
+}
+@media screen and (min-width: 768px) {
+  .btn {
+    font-size: 1.5rem;
+    padding: 1.5rem 6rem;
+    margin-left: 0;
+  }
+}
+/* Logo */
+.logo {
+  width: 13rem;
+}
+@media screen and (min-width: 768px) {
+  .logo {
+    width: 17rem;
+  }
+}
+/* Box-one */
+.heading__picture {
+  width: 100%;
+  margin-top: 6rem;
+}
+/* Box-two */
+.box-two {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .box-two {
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    margin-left: 4rem;
+    margin-top: 13rem;
+  }
+}
+.box-two__heading {
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+}
+.box-two__text {
+  font-family: "Open Sans", sans-serif;
+  color: #fff;
+}
+@media screen and (min-width: 768px) {
+  .box-two__heading {
+    font-size: 4rem;
+  }
+  .box-two__text {
+    font-size: 1.8rem;
+  }
+}
+/* Media Icons */
+.media-buttons {
+  margin-top: 5rem;
+}
+.media {
+  margin: 0.5rem;
+  color: #fff;
+}
+.media:hover {
+  color: var(--color-soft-magenta);
+}
+@media screen and (min-width: 768px) {
+  .media-buttons {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+  }
+  .media {
+    margin: 1rem;
+  }
 }
